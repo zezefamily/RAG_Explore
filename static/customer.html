@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>小衣橱客服</title>
+  <link rel="stylesheet" href="/static/customer.css">
+</head>
+<body>
+  <main class="customer-shell">
+    <header class="customer-header">
+      <div class="avatar" aria-hidden="true">衣</div>
+      <div><h1>小衣橱客服</h1><p><i></i> 在线服务中</p></div>
+      <button id="customerNew" class="new-chat" type="button">新对话</button>
+    </header>
+    <section id="customerMessages" class="messages" aria-live="polite"></section>
+    <section class="quick-asks" aria-label="常见问题">
+      <p>你可能想问</p>
+      <div>
+        <button type="button" data-question="宝宝偏胖，尺码怎么选？">偏胖怎么选码</button>
+        <button type="button" data-question="衣服是什么材质，适合贴身穿吗？">材质安全吗</button>
+        <button type="button" data-question="尺码不合适可以退换吗？">可以退换吗</button>
+      </div>
+    </section>
+    <form id="customerForm" class="composer">
+      <label class="sr-only" for="customerInput">输入咨询问题</label>
+      <textarea id="customerInput" rows="1" maxlength="2000" placeholder="输入你的问题…"></textarea>
+      <button id="customerSend" type="submit" aria-label="发送消息">发送</button>
+    </form>
+    <p class="privacy-note">AI 客服仅依据店铺资料回答；涉及订单和售后以人工确认为准。</p>
+  </main>
+  <script src="/static/customer.js"></script>
+</body>
+</html>
